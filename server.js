@@ -1,13 +1,13 @@
 const http = require('http');
 const host = 'localhost';
-const port = 3333;
+const PORT = 3333;
+var fs = require('fs');
 
-const requestListener = function (req, res) {
-    res.writeHead(200);
-    res.end("Hello World.");
-};
-
-const server = http.createServer(requestListener);
-server.listen(port, host, () => {
-    console.log(`Server is operational on http://${host}:${port}`);
-});
+fs.readFile('./HTML.html', function(error, html) {
+    if (error) throw error;
+    http.createServer(function(request, response) {
+        response.writeHeader(200, {"Content-Type": "text/html"});
+        response.write(html);
+        response.end();
+    }).listen(PORT) && console.log("Server is functional on port 3333");
+})
