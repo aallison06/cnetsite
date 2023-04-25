@@ -9,5 +9,5 @@ fs.readFile('./HTML.html', function(error, html) {
         response.writeHeader(200, {"Content-Type": "text/html"});
         response.write(html);
         response.end();
-    }).listen(PORT) && console.log("Server is functional on port 3333");
+    }).listen(PORT) && console.log("Server is functional on port 3333") && console.log("HEllo");
 })
