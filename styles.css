@@ -2,114 +2,19 @@ body {
 background-color: lightblue;
 }
 
-h1 {
-  text-align: right;
+.home-content {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-p {
-  text-align: right;
-  border: 1px solid;
-  border-radius: 4px;
-}
-
-.homeButton {
-  appearance: button;
-  background-color: #000;
-  background-image: none;
-  border: 1px solid #000;
-  border-radius: 4px;
-  box-shadow: lightblue 4px 4px 0 0,#000 4px 4px 0 1px;
-  box-sizing: border-box;
-  color: lightblue;
-  cursor: pointer;
+.homeButton  {
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 0 5px 10px 0;
-  overflow: visible;
-  padding: 12px 40px;
-  text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
+    margin: 0 20px;
+    text-align: center !important;
 }
 
-.homeButton:focus {
-  text-decoration: none;
+.creditButton  {
+  display: inline-block;
+    margin: 0 20px;
+    text-align: center !important;
+    
 }
-
-.homeButton:hover {
-  text-decoration: none;
-}
-
-.homeButton:active {
-  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-  outline: 0;
-}
-
-.homeButton:not([disabled]):active {
-  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .homeButton {
-    padding: 12px 50px;
-  }
-}
-
-.creditButton {
-    appearance: button;
-    background-color: #000;
-    background-image: none;
-    border: 1px solid #000;
-    border-radius: 4px;
-    box-shadow: lightblue 4px 4px 0 0,#000 4px 4px 0 1px;
-    box-sizing: border-box;
-    color: lightblue;
-    cursor: pointer;
-    display: inline-block;
-    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0 5px 10px 0;
-    overflow: visible;
-    padding: 12px 40px;
-    text-align: center;
-    text-transform: none;
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-  
-  .creditButton:focus {
-    text-decoration: none;
-  }
-  
-  .creditButton:hover {
-    text-decoration: none;
-  }
-  
-  .creditButton:active {
-    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-    outline: 0;
-  }
-  
-  .creditButton:not([disabled]):active {
-    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-    transform: translate(2px, 2px);
-  }
-  
-  @media (min-width: 768px) {
-    .creditButton {
-      padding: 12px 50px;
-    }
-  }
