@@ -10,4 +10,4 @@ fs.readFile('./page.html', function(error, html) {
         response.write(html);
         response.end();
     }).listen(PORT) && console.log("Server is functional on port 3333");
-})
+});
