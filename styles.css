@@ -1,12 +1,24 @@
 body {
-background-color: lightblue;
+  background-color: lightblue;
 }
+
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  float: left;
+}
+
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: left;
+  float: left;
+}
+
 
 .home-content {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-ul, li {
+li {
   text-align: center;
   margin: 0;
   padding: 0;
@@ -14,12 +26,13 @@ ul, li {
   list-style-position:inside;
 }
 
-.homeButton  {
-  display: inline-block;
+.homeButton {
+  float: left;
     margin: 0 20px;
+    margin-right: 10px;
     text-align: center !important;
     align-items: center;
-    appearance: none;
+    appearance: auto;
     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
     border: 0;
     border-radius: 6px;
@@ -57,8 +70,9 @@ ul, li {
 }
 
 .creditButton  {
-  display: inline-block;
+  float: left;
     margin: 0 20px;
+    margin-right: 10px;
     text-align: center !important;
     align-items: center;
     appearance: none;

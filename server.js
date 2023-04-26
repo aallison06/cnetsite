@@ -1,8 +1,8 @@
-const http = require('http');
-const host = 'localhost';
-const PORT = 3333;
-const express = require('express');
-var fs = require('fs');
+const http = require('http'); // Beginning of URL
+const host = 'localhost'; // URL
+const PORT = 3333; // Port
+const express = require('express'); // Express dep
+var fs = require('fs'); //File Share
 
 fs.readFile('./page.html', function(error, html) {
     if (error) throw error;
@@ -12,3 +12,8 @@ fs.readFile('./page.html', function(error, html) {
         response.end();
     }).listen(PORT) && console.log("Server is functional on port 3333");
 });
+
+if (error) {
+    throw error;
+    console.log("An error has occurred.");
+}
