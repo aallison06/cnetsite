@@ -73,7 +73,20 @@ nav {
 }
 
 .homeButton {
-  background-color: #4CAF50;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.aboutButton {
+  background-color: #008CBA;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -86,6 +99,19 @@ nav {
 }
 
 .creditButton {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.contactButton {
   background-color: #008CBA;
   border: none;
   color: white;
