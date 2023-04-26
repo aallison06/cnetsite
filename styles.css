@@ -6,6 +6,14 @@ background-color: lightblue;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+ul, li {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position:inside;
+}
+
 .homeButton  {
   display: inline-block;
     margin: 0 20px;
