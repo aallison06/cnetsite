@@ -25,6 +25,29 @@ function preloadImages(){
 }
 preloadImages("logocnet.png");
 
+// Browser Compatibility Script
+if (typeof window.localStorage !== "undefined") {
+    // localStorage is supported
+} else {
+    // localStorage is not supported
+}
+
+// Browser Compatibility Script 2
+if (typeof document.querySelector !== "undefined") {
+    // querySelector is supported
+} else {
+    // querySelector is not supported
+}
+
+// Mozilla Firefox Compatibility Script
+if (typeof document.body.style.MozUserSelect !== "undefined") {
+    // Firefox is detected
+    document.body.style.MozUserSelect = "none";
+} else {
+    // Other browsers
+    document.body.style.userSelect = "none";
+}
+
 // Error throw
 if (error) {
     throw error;
