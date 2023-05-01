@@ -1,7 +1,7 @@
 body {
   background: rgb(102,102,102);
-  background: -webkit-linear-gradient(to right, rgba(102,102,102,1), rgba(177,201,209,1) 67%, rgba(0,0,0,1) 100%);
-  background: linear-gradient(to right, rgba(102,102,102,1), rgba(177,201,209,1) 67%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 0%, rgba(168,168,168,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 0%, rgba(168,168,168,1) 100%);
   background-size: cover;
   background-position: center;
   
@@ -131,7 +131,7 @@ nav {
   cursor: pointer;
 }
 
-button {
+.contactButton {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #008CBA;
   border: none;
