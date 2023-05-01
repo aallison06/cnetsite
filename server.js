@@ -48,6 +48,16 @@ if (typeof document.body.style.MozUserSelect !== "undefined") {
     document.body.style.userSelect = "none";
 }
 
+var pages = new Array();
+
+function preloadPages(){
+    for (i=0; i < preloadPages.arguments.length; i++){
+        pages [i] = new Page();
+        pages[i].src = preloadPages.arguments[i];
+    }
+}
+preloadPages('page.html', 'credit.html', 'contact.html', 'about.html')
+
 // Error throw
 if (error) {
     throw error;
