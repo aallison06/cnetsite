@@ -14,17 +14,6 @@ fs.readFile('./page.html', function(error, html) {
     }).listen(PORT) && console.log("Server is functional on port 3333");
 });
 
-// Image preloading
-var images = new Array();
-
-function preloadImages(){
-    for (i=0; i < preloadImages.arguments.length; i++){
-        images[i] = new Image();
-        images[i].src = preloadImages.arguments[i];
-    }n
-}
-preloadImages("logocnet.png");
-
 // Browser Compatibility Script
 if (typeof window.localStorage !== "undefined") {
     // localStorage is supported
