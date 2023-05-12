@@ -14,6 +14,13 @@ fs.readFile('./page.html', function(error, html) {
     }).listen(PORT) && console.log("Server is functional on port 3333");
 });
 
+// PORT TEST
+if (PORT !== 3333) {
+    throw error;
+} else {
+    console.log('PORT: Functional');
+}
+
 // Browser Compatibility Script
 if (typeof window.localStorage !== "undefined") {
     // localStorage is supported
