@@ -62,7 +62,18 @@ function preloadPages(){
         pages[i].src = preloadPages.arguments[i];
     }
 }
-preloadPages('page.html', 'credit.html', 'contact.html', 'about.html')
+preloadPages('page.html', 'credit.html', 'contact.html', 'about.html');
+
+// image preload attempt
+var images = new Array();
+
+function preloadImages(){
+    for (i=0; i < preloadImages.arguments.length; i++){
+        images [i] = new Image();
+        images[i].src = preloadImages.arguments[i];
+    }
+}
+preloadImages('logocnet.png');
 
 if(error){
     throw error;
