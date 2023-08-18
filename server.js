@@ -3,6 +3,8 @@ const host = 'localhost'; // URL
 const PORT = 3333; // Port
 const express = require('express'); // Express dep
 var fs = require('fs'); //File Share
+const { error } = require('console');
+const { errorMonitor } = require('events');
 
 // Server creation and file sending
 fs.readFile('./page.html', function(error, html) {
@@ -19,6 +21,14 @@ if (PORT !== 3333) {
     throw error;
 } else {
     console.log('PORT: Functional');
+}
+
+// Host Test Script
+if (host !== 'localhost') {
+    throw error;
+    console.log('Error in lines 25-30');
+} else {
+    console.log('Host: Functional');
 }
 
 // Browser Compatibility Script
@@ -54,8 +64,7 @@ function preloadPages(){
 }
 preloadPages('page.html', 'credit.html', 'contact.html', 'about.html')
 
-// Error throw
-if (error) {
+if(error){
     throw error;
-    console.log("An error has occurred.");
+    console.log('An error has occurred. Refer to terminal.');
 }
