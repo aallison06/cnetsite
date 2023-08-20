@@ -12,6 +12,16 @@ body {
   text-align: center;
 }
 
+.about-content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.credit-content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
 h1 {
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -40,6 +50,15 @@ h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.curriculum-list {
+  list-style: none;
+  padding:0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px
+}
+
 .col h2 {
   margin-top: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -50,8 +69,39 @@ ul {
   padding: 0;
 }
 
+p {
+  opacity: 0.85; /* Slightly reduce text opacity for a softer look */
+  line-height: 1.5; /* Improve readability with proper line spacing */
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-content {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: lightcyan; /* Dark text color for better contrast */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.image-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.image-section img {
+  flex-wrap: wrap;
+  max-width: 90%;
+  height: auto;
+}
 nav {
-  background-color: #333;
   height: 50px;
   display: flex;
   justify-content: flex-end;
@@ -91,57 +141,70 @@ nav {
 
 .homeButton {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #008CBA;
+  background-color: #3498db;
   border: none;
-  color: white;
-  padding: 10px 20px;
+  color: #ffffff;
+  padding: 8px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  outline: none;
+  margin-top: 2px; /* Slightly lower margin */
+}
+
+.homeButton:hover {
+  background-color: #008cba;
+  transform: scale(1.03);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .aboutButton {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #008CBA;
+  background-color: #3498db;
   border: none;
-  color: white;
-  padding: 10px 20px;
+  color: #ffffff;
+  padding: 8px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  outline: none;
+  margin-top: 2px;
+}
+
+.aboutButton:hover {
+  background-color: #008cba;
+  transform: scale(1.03);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .creditButton {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #008CBA;
+  background-color: #3498db;
   border: none;
-  color: white;
-  padding: 10px 20px;
+  color: #ffffff;
+  padding: 8px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  outline: none;
+  margin-top: 2px;
 }
 
-.contactButton {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #008CBA;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
-  cursor: pointer;
+.creditButton:hover {
+  background-color: #008cba;
+  transform: scale(1.03);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 

@@ -26,22 +26,25 @@ if (PORT !== 3333) {
 // Host Test Script
 if (host !== 'localhost') {
     throw error;
-    console.log('Error in lines 25-30');
 } else {
     console.log('Host: Functional');
 }
 
 // Browser Compatibility Script
 if (typeof window.localStorage !== "undefined") {
+    console.log('localStorage is supported.');
     // localStorage is supported
 } else {
+    console.log('localStorage is not supported.');
     // localStorage is not supported
 }
 
 // Browser Compatibility Script 2
 if (typeof document.querySelector !== "undefined") {
+    console.log('querySelector is supported.');
     // querySelector is supported
 } else {
+    console.log('querySelector is not supported.');
     // querySelector is not supported
 }
 
@@ -77,5 +80,6 @@ preloadImages('logocnet.png');
 
 if(error){
     throw error;
-    console.log('An error has occurred. Refer to terminal.');
+} else {
+    console.log('No errors present.')
 }
