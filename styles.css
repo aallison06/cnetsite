@@ -22,6 +22,16 @@ body {
   text-align: center;
 }
 
+
+.credit-content {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: lightcyan; /* Dark text color for better contrast */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 h1 {
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -81,6 +91,15 @@ p {
 }
 
 .about-content {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: lightcyan; /* Dark text color for better contrast */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.home-content {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
