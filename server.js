@@ -83,3 +83,11 @@ if(error){
 } else {
     console.log('No errors present.')
 }
+
+if(typeof window.Buffer !== "undefined"){
+    console.log("Buffer is supported.");
+    //Buffer is supported.
+} else {
+    console.log("Buffer is not supported.");
+    //Buffer is not supported.
+}
