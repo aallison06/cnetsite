@@ -5,9 +5,19 @@ const express = require('express'); // Express dep
 var fs = require('fs'); //File Share
 const { error } = require('console');
 const { errorMonitor } = require('events');
+const fetch = require('node-fetch'); // Fetch API
+
+// Sleep function
+function sleep(milliseconds){
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
 
 // Server creation and file sending
-fs.readFile('./page.html', function(error, html) {
+fs.readFile('./about.html', function(error, html) {
     if (error) throw error;
     http.createServer(function(request, response) {
         response.writeHeader(200, {"Content-Type": "text/html"});
@@ -16,29 +26,50 @@ fs.readFile('./page.html', function(error, html) {
     }).listen(PORT) && console.log("Server is functional on port 3333");
 });
 
+// Check if the fetch API is available
+if (typeof fetch !== 'function') {
+    // If not, throw an error
+    throw new Error('node-fetch is not available');
+}
+
+/*
+// http Test
+if (http === "undefined") {
+    throw error;
+} else {
+    console.log('http: Functional');
+}
+sleep(1000);
+// fs Test
+if (fs === "undefined") {
+    throw error;
+} else {
+    console.log('fs: Functional');
+}
+sleep(1000);    
+// Express Test
+if (express === "undefined") {
+    throw error;
+} else {
+    console.log('Express: Functional');
+}
+sleep(1000);
 // PORT TEST
 if (PORT !== 3333) {
     throw error;
 } else {
     console.log('PORT: Functional');
 }
-
+sleep(1000);
 // Host Test Script
 if (host !== 'localhost') {
     throw error;
 } else {
     console.log('Host: Functional');
 }
-
-// Browser Compatibility Script
-if (typeof window.localStorage !== "undefined") {
-    console.log('localStorage is supported.');
-    // localStorage is supported
-} else {
-    console.log('localStorage is not supported.');
-    // localStorage is not supported
-}
-
+sleep(1000);
+*/
+/*
 // Browser Compatibility Script 2
 if (typeof document.querySelector !== "undefined") {
     console.log('querySelector is supported.');
@@ -46,8 +77,8 @@ if (typeof document.querySelector !== "undefined") {
 } else {
     console.log('querySelector is not supported.');
     // querySelector is not supported
-}
-
+} */
+/*
 // Mozilla Firefox Compatibility Script
 if (typeof document.body.style.MozUserSelect !== "undefined") {
     // Firefox is detected
@@ -55,8 +86,8 @@ if (typeof document.body.style.MozUserSelect !== "undefined") {
 } else {
     // Other browsers
     document.body.style.userSelect = "none";
-}
-
+} */
+/*
 var pages = new Array();
 
 function preloadPages(){
@@ -77,17 +108,15 @@ function preloadImages(){
     }
 }
 preloadImages('logocnet.png');
-
+*/
+/*
 if(error){
     throw error;
 } else {
     console.log('No errors present.')
 }
 
-if(typeof window.Buffer !== "undefined"){
-    console.log("Buffer is supported.");
-    //Buffer is supported.
-} else {
-    console.log("Buffer is not supported.");
-    //Buffer is not supported.
-}
+// Error support script
+if(typeof error === "undefined") {
+    console.log("A critical error has occurred. Please contact site administrator or developer.");
+} */
