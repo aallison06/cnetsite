@@ -1,11 +1,11 @@
 const http = require('http'); // Beginning of URL
 const host = 'localhost'; // URL
-const PORT = 3333; // Port
+const PORT = 3223; // Port
 const express = require('express'); // Express dep
 var fs = require('fs'); //File Share
 const { error } = require('console');
 const { errorMonitor } = require('events');
-const fetch = require('node-fetch'); // Fetch API
+const path = require('path');
 
 // Sleep function
 function sleep(milliseconds){
@@ -17,50 +17,52 @@ function sleep(milliseconds){
 }
 
 // Server creation and file sending
-fs.readFile('./about.html', function(error, html) {
-    if (error) throw error;
-    http.createServer(function(request, response) {
+fs.readFile('./page.html', function(err, html) {
+    if (err) {
+        throw err;
+    }
+    const server = http.createServer(function(request, response) {
         response.writeHeader(200, {"Content-Type": "text/html"});
         response.write(html);
         response.end();
-    }).listen(PORT) && console.log("Server is functional on port 3333");
+    });
+    server.listen(PORT, () => {
+        console.log(`Server running at http://${host}:${PORT}/`);
+    });
 });
 
-// Check if the fetch API is available
-if (typeof fetch !== 'function') {
-    // If not, throw an error
-    throw new Error('node-fetch is not available');
-}
-
-/*
 // http Test
-if (http === "undefined") {
-    throw error;
+if (typeof http === "undefined") {
+    throw new Error('http: Not functional');
 } else {
     console.log('http: Functional');
 }
 sleep(1000);
+
 // fs Test
-if (fs === "undefined") {
-    throw error;
+if (typeof fs === "undefined") {
+    throw new Error('fs: Not functional');
 } else {
     console.log('fs: Functional');
 }
-sleep(1000);    
+sleep(1000);
+
 // Express Test
-if (express === "undefined") {
-    throw error;
+if (typeof express === "undefined") {
+    throw new Error('express: Not functional');
 } else {
-    console.log('Express: Functional');
+    console.log('express: Functional');
 }
 sleep(1000);
+
 // PORT TEST
-if (PORT !== 3333) {
+if (PORT !== 3223) {
     throw error;
 } else {
     console.log('PORT: Functional');
 }
 sleep(1000);
+
 // Host Test Script
 if (host !== 'localhost') {
     throw error;
@@ -68,7 +70,15 @@ if (host !== 'localhost') {
     console.log('Host: Functional');
 }
 sleep(1000);
-*/
+
+//Catch script
+if (typeof error === "undefined") {
+    console.log("A critical error has occurred. Please contact site administrator or developer.");
+} else {
+    console.log('No errors present. Loading...');
+}
+sleep(2000);
+
 /*
 // Browser Compatibility Script 2
 if (typeof document.querySelector !== "undefined") {
