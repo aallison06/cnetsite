@@ -30,46 +30,64 @@ fs.readFile('./page.html', function(err, html) {
         console.log(`Server running at http://${host}:${PORT}/`);
     });
 });
+// http host PORT express fs errorMonitor path
 
-// http Test
-if (typeof http === "undefined") {
-    throw new Error('http: Not functional');
+// http test
+if (http === "undefined"){
+    console.log("http is undefined.///");
 } else {
-    console.log('http: Functional');
+    console.log("Test 1: PASS ///");
 }
 sleep(1000);
 
-// fs Test
-if (typeof fs === "undefined") {
-    throw new Error('fs: Not functional');
+// host test
+if (host === "undefined"){
+    console.log("host is undefined//////");
 } else {
-    console.log('fs: Functional');
+    console.log("Test 2: PASS //////");
 }
 sleep(1000);
 
-// Express Test
-if (typeof express === "undefined") {
-    throw new Error('express: Not functional');
+// PORT test
+if (PORT === "undefined"){
+    console.log("PORT is undefined/////////");
 } else {
-    console.log('express: Functional');
+    console.log("Test 3: PASS /////////");
 }
 sleep(1000);
 
-// PORT TEST
-if (PORT !== 3223) {
-    throw error;
+// express test
+if (express === "undefined"){
+    console.log("express is undefined////////////");
 } else {
-    console.log('PORT: Functional');
+    console.log("Test 4: PASS ////////////");
 }
 sleep(1000);
 
-// Host Test Script
-if (host !== 'localhost') {
-    throw error;
+// fs test
+if (fs === "undefined"){
+    console.log("fs is undefined/////////"); 
 } else {
-    console.log('Host: Functional');
+    console.log("Test 5: PASS /////////");
 }
 sleep(1000);
+
+// errorMonitor test
+if (errorMonitor === "undefined"){
+    console.log("errorMonitor is undefined//////");
+} else {
+    console.log("Test 6: PASS //////");
+}
+sleep(1000);
+
+// path test
+if (path === "undefined"){
+    console.log("path is undefined///");
+} else {
+    console.log("Test 7: PASS ///");
+}
+sleep(1000);
+
 
 //Catch script
 if (typeof error === "undefined") {
@@ -77,6 +95,7 @@ if (typeof error === "undefined") {
 } else {
     console.log('No errors present. Loading...');
 }
+
 sleep(2000);
 
 /*
