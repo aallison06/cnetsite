@@ -7,6 +7,16 @@ body {
   
 }
 
+footer{
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
 .home-content{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
   text-align: center;
@@ -27,7 +37,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  color: lightcyan; /* Dark text color for better contrast */
+  color: lightcyan; /* Light text color for better contrast */
   font-size: 16px;
   line-height: 1.6;
 }
@@ -39,6 +49,54 @@ h1 {
 
 h2 {
   text-align: center;
+}
+
+.animated-title{
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+
+  animation: blink 3s infinite;
+}
+
+@keyframes blink{
+  50%{
+    opacity: 0;
+}
+}
+
+.animated-text{
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  animation: slide-in 2s ease-in-out forwards;
+}
+
+.animated-text-one{
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  animation: slide-in 3s ease-in-out forwards;
+}
+
+.animated-text-two{
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  animation: slide-in 4s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  from{
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .container {

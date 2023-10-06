@@ -16,6 +16,8 @@ function sleep(milliseconds){
     } while (currentDate - date < milliseconds);
 }
 
+console.time();
+
 // Server creation and file sending
 fs.readFile('./page.html', function(err, html) {
     if (err) {
@@ -97,3 +99,6 @@ if (typeof error === "undefined") {
 }
 
 sleep(2000);
+
+// End of script
+console.timeEnd();
